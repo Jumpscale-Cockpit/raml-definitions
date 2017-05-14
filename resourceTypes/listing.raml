@@ -1,0 +1,8 @@
+usage: This resourceType should be used for any collection of items that only supports listing
+get:
+  displayName: List<<resourcePathName>>
+  description: List all <<resourcePathName>>
+  responses:
+    200:
+      body:
+        type: <<resourcePathName | !singularize | !uppercamelcase>>[]

@@ -1,0 +1,18 @@
+usage: This resourceType should be used for any collection member
+get:
+  displayName: Get<<resourcePathName | !singularize>>
+  description: Get detail view about <<resourcePathName | !singularize>>
+  responses:
+    200:
+      body:
+        type: <<resourcePathName | !singularize | !uppercamelcase>>
+    404:
+      description: <<resourcePathName | !singularize>> not found
+delete:
+  displayName: Delete<<resourcePathName | !singularize>>
+  description: Delete <<resourcePathName | !singularize>>
+  responses:
+    204:
+      description: <<resourcePathName | !singularize>> deleted successfully
+    404:
+      description: <<resourcePathName | !singularize>> not found

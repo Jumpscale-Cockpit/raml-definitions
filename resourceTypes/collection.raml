@@ -1,0 +1,20 @@
+usage: This resourceType should be used for any collection of items
+get:
+  displayName: List<<resourcePathName>>
+  description: List all <<resourcePathName>>
+  responses:
+    200:
+      body:
+        type: <<resourcePathName | !singularize | !uppercamelcase>>[]
+post:
+  displayName: Create<<resourcePathName | !singularize>>
+  description: Create a new <<resourcePathName | !singularize>>
+  body:
+    type: <<resourcePathName | !singularize | !uppercamelcase>>
+  responses:
+    201:
+      description: <<resourcePathName | !singularize>> created
+      body:
+        type: <<resourcePathName | !singularize | !uppercamelcase>>
+    409:
+      description: conflict, a <<resourcePathName | !singularize>> with this id already exists
