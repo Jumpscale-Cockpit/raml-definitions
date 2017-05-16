@@ -9,6 +9,15 @@ get:
         type: <<resourcePathName | !singularize | !uppercamelcase>>
     404:
       description: <<resourcePathName | !singularize>> not found
+put:
+  displayName: Update<<resourcePathName | !singularize>>
+  description: Update <<resourcePathName | !singularize>>
+  responses:
+    200:
+      body:
+        type: <<resourcePathName | !singularize | !uppercamelcase>>
+    404:
+      description: <<resourcePathName | !singularize>> not found
 delete:
   displayName: Delete<<resourcePathName | !singularize>>
   description: Delete <<resourcePathName | !singularize>>
