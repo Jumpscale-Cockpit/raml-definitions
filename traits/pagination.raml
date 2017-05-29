@@ -1,0 +1,29 @@
+#%RAML 1.0 traits
+usage: Apply on ressources that supports pagination
+
+queryParameters:
+  page:
+    type: integer
+    description: number of the page to return
+  per_page:
+    type: integer
+    description: Specify how many item you want to receive in the response.
+    maximum: 100
+    minimum: 1
+    default: 30
+    multipleOf: 1
+responses:
+  200:
+    headers:
+      page-first:
+        type: string
+        description: Link to the first page of this ressource.
+      page-last:
+        type: string
+        description: Link to the last page of this ressource.
+      page-prev:
+        type: string
+        description: Link to the previous page of this ressource. Null when the request is already the first page
+      page-next:
+        type: string
+        description: Link to the next page of this ressource. Null when the request is already the last page
