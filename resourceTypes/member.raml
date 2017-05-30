@@ -1,7 +1,7 @@
 #%RAML 1.0 ResourceType
 usage: This resourceType should be used for any collection member
 get:
-  displayName: Get<<resourcePathName | !singularize>>
+  displayName: Get<<resourcePathName | !singularize | !uppercamelcase>>
   description: Get detail view about <<resourcePathName | !singularize>>
   responses:
     200:
@@ -10,7 +10,7 @@ get:
     404:
       description: <<resourcePathName | !singularize>> not found
 put:
-  displayName: Update<<resourcePathName | !singularize>>
+  displayName: Update<<resourcePathName | !singularize | !uppercamelcase>>
   description: Update <<resourcePathName | !singularize>>
   responses:
     200:
@@ -19,7 +19,7 @@ put:
     404:
       description: <<resourcePathName | !singularize>> not found
 delete:
-  displayName: Delete<<resourcePathName | !singularize>>
+  displayName: Delete<<resourcePathName | !singularize | !uppercamelcase>>
   description: Delete <<resourcePathName | !singularize>>
   responses:
     204:

@@ -1,14 +1,14 @@
 #%RAML 1.0 ResourceType
 usage: This resourceType should be used for any collection of items
 get:
-  displayName: List<<resourcePathName>>
+  displayName: List<<resourcePathName | !uppercamelcase>>
   description: List all <<resourcePathName>>
   responses:
     200:
       body:
         type: <<resourcePathName | !singularize | !uppercamelcase>>[]
 post:
-  displayName: Create<<resourcePathName | !singularize>>
+  displayName: Create<<resourcePathName | !singularize | !uppercamelcase>>
   description: Create a new <<resourcePathName | !singularize>>
   body:
     type: <<resourcePathName | !singularize | !uppercamelcase>>Create
