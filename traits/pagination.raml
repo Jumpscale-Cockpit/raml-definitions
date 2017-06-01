@@ -5,6 +5,7 @@ queryParameters:
   page:
     type: integer
     description: number of the page to return
+    required: false
   per_page:
     type: integer
     description: Specify how many item you want to receive in the response.
@@ -12,6 +13,7 @@ queryParameters:
     minimum: 1
     default: 30
     multipleOf: 1
+    required: false
 responses:
   200:
     headers:
