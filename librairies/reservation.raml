@@ -96,16 +96,16 @@ types:
         description: |
           Storage size of the reservation in MiB
         required: true
-        type: number
-        format: float
+        type: integer
+        format: int64
         minimum: 1
         multipleOf: 1
       sizeUsed:
         description: |
           Storage size of the reservation already used
         required: true
-        type: number
-        format: float
+        type: integer
+        format: int64
         minimum: 1
       expireAt:
         description: |
