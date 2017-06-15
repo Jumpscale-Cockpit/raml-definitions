@@ -83,17 +83,15 @@ types:
     properties:
       id:
         type: string
-        pattern: ^\w+$
+        pattern: ^[a-zA-Z0-9]+$
       adminId:
         type: string
         description: ItYou.Online ID of the user that has right to administrate this reservation
-        pattern: ^\w+$
+        pattern: ^[a-zA-Z0-9]+$
       created:
-        type: integer
-        format: int64
+        type: datetime
       updated:
-        type: integer
-        format: int64
+        type: datetime
       sizeReserved:
         description: |
           Storage size of the reservation in MiB
