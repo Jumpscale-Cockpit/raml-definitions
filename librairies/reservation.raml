@@ -60,6 +60,9 @@ types:
 
   ReservationRequest:
     properties:
+      id:
+        type: string
+        pattern: ^[a-zA-Z0-9]+$
       size:
         description: |
           Storage size you want to reserve in MiB
@@ -76,6 +79,7 @@ types:
         minimum: 1
     examples:
       properties:
+        id: uniqueID
         size: 128
         period: 30
 
